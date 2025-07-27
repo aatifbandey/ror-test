@@ -1,0 +1,65 @@
+
+<div class="layout">
+    <div class="form-wrap">
+        <div>
+            <div class="title"> Add inventory </div>
+            <form action="/products" accept-charset="UTF-8" method="post" class="form">
+                <div class="flex-col">
+                    <div class="row">
+                    <label>Item Name: </label>  <input class="input-box" name="product[name]" id="product_name" type="text" />
+                    </div>  
+                    <div class="row">
+                    <label>Quantity:</label> <input class="input-box" name="product[quantity]" id="product_quantity" type="text" />
+                    </div>
+                    <div class="row">
+                    <label>Price: </label> <input class="input-box" name="product[price]" id="product_price" type="text" />
+                    </div>
+                </div>
+                <div class="btn-wrap">
+                    <button class="primary-btn primary-btn-non-disabled"> Create </button>
+                </div>
+            </form>
+            
+        </div>
+    </div>
+    <div id="products" class="table-wrap">
+        <table>
+            <thead>
+                <tr>
+                <th> 
+                    Product Name
+                    </th>
+                
+                    <th>
+                    Quantity
+                    </th> 
+                    <th>
+                    Price
+                    </th>
+                </tr>
+            </thead>
+        <tbody>
+    <% @products.each do |product| %>
+    
+                <tr>
+                <td> <a href="/products/<%= product.id %>">
+                    <%= product.name %>
+                    </a>
+                    </td>
+            
+                <td> 
+                    <%= product.quantity %>
+                    
+                    </td>
+            
+                <td> 
+                    <%= product.price %>
+                    </td>
+                </tr>
+            
+    <% end %>
+    </tbody>
+    </table>
+            
+    </div>
+</div>

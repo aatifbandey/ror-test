@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  name: MyString
+  email: MyString
+  phone: MyString
+  loanAmount: 9.99
+  collegeName: MyString
+
+two:
+  name: MyString
+  email: MyString
+  phone: MyString
+  loanAmount: 9.99
+  collegeName: MyString
