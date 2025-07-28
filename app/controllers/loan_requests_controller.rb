@@ -14,7 +14,7 @@ class LoanRequestsController < ApplicationController
   def create
     @loan_request = LoanRequest.new(loan_requests_params)
     if @loan_request.save
-      redirect_to '/products', notice: "Request was successfully created."
+      redirect_to '/loan_requests', notice: "Request was successfully created."
     else
       render :new, status: :unprocessable_entity
     end
